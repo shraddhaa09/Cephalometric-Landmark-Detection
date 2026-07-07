@@ -1,0 +1,21 @@
+model:
+  architecture: resnet18
+  pretrained: true
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  early_stopping_patience: 8
+  deterministic: true
+  loss_type: smooth_l1
+
+dataset:
+  image_size: 512
+  augmentation:
+    horizontal_flip: true
+    brightness: true
+    rotation: true
+
+logging:
+  log_dir: runs
